@@ -8,7 +8,7 @@ This repository contains the scripts used in the experiments of my [Master's the
 
 [Training agents](#training-agents)
 
-[Analyzing the training](#analyzing-training)
+[Analyzing the training](#analyzing-the-training)
 
 [Visualizing](#visualizing)
 
@@ -100,5 +100,6 @@ As with the training scripts, more information about the command line options is
 The format of the training performance graph is as follows:
 
 <img src="/images/humanoid_training_multi.png" alt="humanoid_training" width="500"/>
+
 
 ## Visualizing
