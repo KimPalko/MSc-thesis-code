@@ -8,6 +8,8 @@ This repository contains the scripts used in the experiments of my [Master's the
 
 [Training agents](#training-agents)
 
+[Analyzing the training](#analyzing-training)
+
 [Visualizing](#visualizing)
 
 
@@ -75,5 +77,28 @@ Here are three example commands, one for each agent:
 		--seed 1234\
 		--info "Humanoid example"
 
+For more information about the command line options, please refer to the descriptions of the options (available in the .py files or via the command line).
+
+During the execution of a training script, a number of snapshots are saved to the results directory. Snapshots provide a means to observe the behavior of an agent
+at different times during training. Once the execution of the script completes, a summary containing the used hyperparameters and the values given to each command
+option is saved along with the final snapshot.
+
+## Analyzing the training
+If Tensorboard logging was enabled during training, performance graphs of the run can be plotted. The graphs are plotted using `plot_logs.py`. Tensorboard logs
+are saved to the results directory, and the log files are named according to the experiment name and chosen curriculum.
+
+This example command illustrates how the logging script is used:
+
+	python plot_logs.py\
+		--experiments-dir results/humanoid\
+		--experiments "humanoid_1,humanoid_2,humanoid_3"\
+		--legend-labels "Baseline;Curriculum_1;Curriculum_2"\
+		--title "Training results"
+
+As with the training scripts, more information about the command line options is available in `plot_logs.py`.
+
+The format of the training performance graph is as follows:
+
+<img src="/images/humanoid_training_multi.png" alt="humanoid_training" width="500"/>
 
 ## Visualizing
