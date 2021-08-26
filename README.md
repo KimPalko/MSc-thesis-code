@@ -12,6 +12,8 @@ This repository contains the scripts used in the experiments of my [Master's the
 
 [Visualizing](#visualizing)
 
+[Miscellaneous](#miscellaneous)
+
 
 ## Introduction
 The scripts in this repository are used for training machine learning agents in movement-related tasks and for visualizing the loss landscapes of trained neural networks.
@@ -177,3 +179,14 @@ contour plots will appear on the same row. The script automatically plots all sl
 		--sigma-range "1.0,0.1"\
 		--show-image
 
+
+## Miscellaneous
+The behaviors of trained agents can be tested using `test_model.py`.
+
+Specific points in a landscape can be selected for testing; each point is a set of network parameters. These parameters can be loaded for testing with
+`test_model_from_landscape.py`.
+
+Untrained networks can be initialized with `pre_init_model.py`. This allows one to reuse an untrained agent for multiple training runs.
+
+This codebase uses a modified version of the PPO and policy network scripts from Stable-Baselines 3: `policy_networks.py` and `custom_ppo.py` implement linearly
+annealed standard deviation for exploration noise. This feature was unavailable in the original implementation.
