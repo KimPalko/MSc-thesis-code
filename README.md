@@ -103,3 +103,8 @@ The format of the training performance graph is as follows:
 
 
 ## Visualizing
+Landscape visualizations are made using scripts `generate_landscape_data.py` and `visualize_landscape.py`. The first computes a two-dimensional array of data
+by evaluating the appropriate reward function at multiple points in a grid. The second produces a contour plot based on the grid of evaluated points. The process
+of visualization is explained in more detail in my thesis, and the following image summarizes the process:
+
+<img src="/images/visualization_flowchart.png" alt="visualization_process" width="200"/>
